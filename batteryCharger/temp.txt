@@ -1,0 +1,40 @@
+
+//constant voltage regulation
+for (int i = 0; i < 256; i++)
+		{
+			batteryVoltage = measureBatteryVoltage();
+			if (batteryVoltage < targetVoltage)
+			{
+				PWR_PWM++;
+			}
+			else
+			{
+				PWR_PWM--;
+			}
+		}
+
+		lcd.lcd_goto_xy(0, 0);
+		lcd.lcd_string_format("Vout: %5.2f \nIout: %5.2f \nPWM: %03d", batteryVoltage, measureChargingCurrent(), PWR_PWM);
+
+
+void constantCurrent(float current)
+{
+	PWM_SUPPLY_MODE;
+	PWM_START;
+
+
+	while (1)
+	{
+		chargingCurrent = measureChargingCurrent();
+		if (chargingCurrent < (current * 0.95))
+		{
+			SUPPLY_PWM++;
+		}
+		else if (chargingCurrent > (current * 1.05))
+		{
+			SUPPLY_PWM--;
+		}
+
+	}
+	
+}
