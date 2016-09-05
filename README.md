@@ -1,5 +1,4 @@
-# batteryCharger
-AVR-based universal battery charger
+# AVR-based universal battery charger
 
 Hello everybody,
 I just wanted to share with you my most recent project, an AVR Multichemistry charger. There has been a lot of fuzz about charging batteries with AVR, but there are not many complete schematics and/or projects on the internet.
