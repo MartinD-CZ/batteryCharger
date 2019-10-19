@@ -1,7 +1,7 @@
 # AVR-based universal battery charger
 
-**UPDATE!** By popular request, I will be releasing a new version. Check [this post](http://embedblog.eu/?p=204) for more information.
-**UPDATE #2** I've abandoned the project, mostly because of time. What I have so far has been put into the 'experimental' folder.
+**UPDATE!** By popular request, I will be releasing a new version. Check [this post](http://embedblog.eu/?p=204) for more information.  
+**UPDATE #2** I've abandoned the project, mostly because of time. What I have so far has been put into the 'unfinished-arduino' folder.
 
 ###### Overall
 The charger is based on Atmega 328 (because it is dirt cheap) and utilizes its PWM to drive a FET, used as buck converter. There is also an 5110 LCD (again, less than 2 USD on Ebay) to show some basic menus and stuff. Most of the settings are adjustable on the go, so once you build and program it, you can use it without further reprogramming for all battery types and so on.
